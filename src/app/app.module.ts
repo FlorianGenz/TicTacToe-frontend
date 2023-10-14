@@ -11,6 +11,7 @@ import {BackendService} from "../services/backend.service";
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { GameBoardComponent } from './game-board/game-board.component';
 import { LogInWindowComponent } from './admin-panel/log-in-window/log-in-window.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LogInWindowComponent } from './admin-panel/log-in-window/log-in-window.
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [BackendService],
   bootstrap: [AppComponent]

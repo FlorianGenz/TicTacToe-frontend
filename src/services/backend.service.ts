@@ -9,7 +9,8 @@ import {Room} from "../model/room";
 })
 export class BackendService {
 
-  private baseUrl = "https://tictactoe-backend-ji2q.onrender.com/backend/room";
+  //private baseUrl = "https://tictactoe-backend-ji2q.onrender.com/backend/room";
+  private baseUrl = "http://localhost:8080/backend/room";
 
   constructor(private httpClient: HttpClient) {
   }
@@ -44,5 +45,9 @@ export class BackendService {
 
   leaveRoom(roomId: number, player: number): Observable<boolean>{
     return this.httpClient.post<boolean>(`${this.baseUrl}/${roomId}/leaveRoom`, player);
+  }
+
+  logIn(usernamePassword: string[]): Observable<boolean>{
+    return this.httpClient.post<boolean>(`${this.baseUrl}/adminPanel/login`, usernamePassword)
   }
 }
