@@ -51,4 +51,25 @@
   content: "X";
 }
 
+#name{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+  margin: 5px;
+  z-index: 5;
+  font-size: 10px;
+  background-color: #78d76a;
+  padding: 5px;
+  border-radius: 4px;
+
+  a{
+    color: inherit;
+    text-decoration-line: none;
+  }
+
+  a:hover{
+    text-decoration-line: underline;
+  }
+}
 
